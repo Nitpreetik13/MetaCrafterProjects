@@ -9,6 +9,7 @@ Consisting all the Project that has been assigned by Metacrafters.
 This repository serves as a collection of assignments completed throughout my learning journey. Each file is named after the specific course it pertains to, ensuring easy identification.
 * [jsassessement.js](https://github.com/Nitpreetik13/MetaCrafterProjects/blob/main/jsassessement.js)
 * [ethfirst.sol](https://github.com/Nitpreetik13/MetaCrafterProjects/blob/main/ethfirst.sol)
+* [ethavx.sol](https://github.com/Nitpreetik13/MetaCrafterProjects/blob/main/ethavx.sol)
 
 ## Executing program
 I'll delve into the execution process of these codes, outlining the steps involved. For further clarity, I've also included a Loom video showcasing the process in action.
@@ -19,6 +20,8 @@ I'll delve into the execution process of these codes, outlining the steps involv
   * Manage supply: Control the minting and burning of your token to influence its availability.
   * Understand total supply: Determine the overall quantity of your token in circulation.
   * The provided Loom video delves deeper into these functionalities, offering a visual explanation. [🔗 Loom](https://www.loom.com/share/fbf18e5796d6483b82bdc2fd37dcf031?sid=04f64495-814f-493d-936b-ad1244779139).
+* ethavx.sol : This simplified contract verifies if the caller's address matches the contract owner's address. It utilizes three seemingly identical functions: require(), revert(), and assert(), each achieving the same purpose. [🔗 Loom](https://www.loom.com/share/4f69a2780b4e4dd6a8fd965eee5393fc?sid=f7ffbf8d-30f2-4622-8733-673334d09ad4).
+
 
 
 ## Author
