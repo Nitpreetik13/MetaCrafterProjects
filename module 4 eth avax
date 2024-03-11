@@ -1,0 +1,63 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+contract EncryptedToken { 
+
+  uint256 public total_supply;  
+  address public holder;        
+
+  string public token_name = "EGNT"; 
+  string public token_symbol = "EGT"; 
+
+  uint8 public token_decimals = 18;   
+
+  constructor() {
+    holder = msg.sender;
+  }
+
+  mapping(address => uint256) public allowances; 
+
+  // Mint function (signature preserved)
+  function mint(address to, uint256 amount) public {
+    require(msg.sender == holder, "Only the contract owner can mint tokens.");
+    require(amount > 0, "Amount must be greater than 0.");
+
+    allowances[to] += amount;
+    total_supply += amount;
+  }
+
+  // Burn function (signature preserved)
+  function burn(address from, uint256 amount) public {
+    require(amount <= allowances[from], "Amount exceeds balance.");
+
+    allowances[from] -= amount;
+    total_supply -= amount;
+  }
+
+  // Transfer function (signature preserved)
+  function transfer(address to, uint256 amount) public {
+    require(amount <= allowances[msg.sender], "Amount exceeds balance.");
+    require(to != address(0), "Cannot transfer to the zero address.");
+
+    allowances[msg.sender] -= amount;
+    allowances[to] += amount;
+  }
+
+  // Redeem function (signature preserved)
+  function redeem(address to, uint256 amount, uint256 item_id) public {
+    require(amount <= allowances[to], "Amount exceeds balance");
+
+    if (item_id == 1) {
+      require(amount >= 50, "Insufficient tokens for Item 1");
+      burn(to, amount);
+    } else if (item_id == 2) {
+      require(amount >= 100, "Insufficient tokens for Item 2");
+      burn(to, amount);
+    } else if (item_id == 3) {
+      require(amount >= 200, "Insufficient tokens for Item 3");
+      burn(to, amount);
+    } else {
+      revert("Invalid item ID");
+    }
+  }
+}
