@@ -1,29 +1,12 @@
-<div align= "center">
-<h1>Metacrafters Projects</h1>
-Consisting all the Project that has been assigned by Metacrafters.
-  
+# Starter Next/Hardhat Project
 
-</div>
+After cloning the github, you will want to do the following to get the code running on your computer.
 
-## Description
-This repository serves as a collection of assignments completed throughout my learning journey. Each file is named after the specific course it pertains to, ensuring easy identification.
-* [jsassessement.js](https://github.com/Nitpreetik13/MetaCrafterProjects/blob/main/jsassessement.js)
-* [ethfirst.sol](https://github.com/Nitpreetik13/MetaCrafterProjects/blob/main/ethfirst.sol)
-* [ethavx.sol](https://github.com/Nitpreetik13/MetaCrafterProjects/blob/main/ethavx.sol)
+1. Inside the project directory, in the terminal type: npm i
+2. Open two additional terminals in your VS code
+3. In the second terminal type: npx hardhat node
+4. In the third terminal, type: npx hardhat run --network localhost scripts/deploy.js
+5. Back in the first terminal, type npm run dev to launch the front-end.
 
-## Executing program
-I'll delve into the execution process of these codes, outlining the steps involved. For further clarity, I've also included a Loom video showcasing the process in action.
-* jsassessement.js : Get ready to explore the world of NFT creation! This section unpacks the process of creating variables to hold NFTs, defining their metadata, minting them on the blockchain, and determining the total supply. To enhance your understanding, a Loom video showcases these functionalities in action. [🔗 Loom](https://www.loom.com/share/470447e3974f4d848b5821901e45d7b7?sid=2b104a4a-a7c1-47ac-afbd-5803a7bd648b)
-* ethfirst.sol : Dive into the world of custom token creation with this Solidity contract! This program, compilable using Remix IDE, lets you:
-  * Create your own token: Develop a unique digital asset to represent value or ownership.
-  * Track balances: Keep tabs on how much of your token each address holds.
-  * Manage supply: Control the minting and burning of your token to influence its availability.
-  * Understand total supply: Determine the overall quantity of your token in circulation.
-  * The provided Loom video delves deeper into these functionalities, offering a visual explanation. [🔗 Loom](https://www.loom.com/share/fbf18e5796d6483b82bdc2fd37dcf031?sid=04f64495-814f-493d-936b-ad1244779139).
-* ethavx.sol : This simplified contract verifies if the caller's address matches the contract owner's address. It utilizes three seemingly identical functions: require(), revert(), and assert(), each achieving the same purpose. [🔗 Loom](https://www.loom.com/share/4f69a2780b4e4dd6a8fd965eee5393fc?sid=f7ffbf8d-30f2-4622-8733-673334d09ad4).
-
-
-
-## Author
-This repository is under Nitpreet Singh. [Contact me](mailto:nitpreetsingh03@gmail.com)
-
+After this, the project will be running on your localhost. 
+Typically at http://localhost:3000/
